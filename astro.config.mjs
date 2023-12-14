@@ -13,5 +13,4 @@ export default defineConfig({
   },
   integrations: [mdx()],
   site: "https://nagaki.github.io",
-  base: "/blog2",
 })
