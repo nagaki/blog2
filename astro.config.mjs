@@ -1,6 +1,6 @@
-import { defineConfig } from "astro/config";
+import { defineConfig } from "astro/config"
 
-import mdx from "@astrojs/mdx";
+import mdx from "@astrojs/mdx"
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,8 +8,10 @@ export default defineConfig({
     shikiConfig: {
       theme: "min-light",
       langs: [],
-      wrap: true
-    }
+      wrap: true,
+    },
   },
-  integrations: [mdx()]
-});
+  integrations: [mdx()],
+  site: "https://nagaki.github.io",
+  base: "/blog2",
+})
