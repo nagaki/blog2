@@ -1,0 +1,149 @@
+---
+title: Redcarpetを使ってMarkdownをHTMLに変換するその1
+description: RubyのライブラリRedcarpetを使ってMarkdownからHTMLを作る簡単なスクリプトを作る話
+tags:
+  - Ruby
+---
+
+import Gist from "@components/Gist.astro"
+
+## きっかけ
+
+仕事で、簡単なドキュメントを作る機会がありました。
+
+ExcelやWordで作るという考えは全くなくて、自分の使えるもので
+一番早く作成できて、簡潔に見せられるものとは、と考えた結果、
+HTMLで作成するのが良いと思いました。
+
+早速作業に取り掛かりましたが、一番最初に書き始めたのが、
+ディレクトリツリーを表すためにul, liタグをネストさせているコードだったこともあり、
+
+```html
+<ul>
+  <li>
+    ディレクトリ1
+    <ul>
+      <li>ファイル1</li>
+      <li>ファイル2</li>
+    </ul>
+  </li>
+  <!-- 以下延々と続く気配 -->
+</ul>
+```
+
+ものの数分で厳しいなと気づきました。
+
+MiddlemanでHamlを使って書くとか、JekyllでMarkdownで書くとか思い浮かびましたが、
+開発環境は完全なオフライン環境。どうしようかなあと考えながら、
+開発中のRailsのGemfileを眺めていると`gem 'redcarpet'`の1行が!!!これは!??
+
+というのも、このブログを作った際に、標準のMarkdown Parserだと、
+コードの表示が上手くいかなくて、他に使用できるParserを調べた経験があったのです。
+(使用しているのは[Rdiscount][rdiscount])
+
+「Markdownだったらネストしているリストもこう書ける!!!」
+
+```md
+- ディレクトリ
+  - ファイル1
+  - ファイル2
+```
+
+Redcarpetの使い方は知りませんが、とにかく残された道はこれしかありませんでした。
+
+## MarkdownからHTMLにする
+
+README.markdownを見たところ下記のようにするようです。たったこれだけ??
+
+```ruby
+markdown = Redcarpet::Markdown.new(renderer, extensions = {})
+markdown.render("This is *bongos*, indeed.")
+# => "<p>This is <em>bongos</em>, indeed.</p>"
+```
+
+Markdownの読み込みとHTMLの書き込み、HTMLタグを追加すると、
+
+```ruby
+# coding: utf-8
+require "rubygems"
+require "bundler/setup"
+require "redcarpet"
+
+# マークダウンをHTMLに変換
+def convert(file_name)
+  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+  File.open("./#{file_name}.md", "r:UTF-8") do |file|
+    markdown.render(file.read)
+  end
+end
+
+# HTMLを書き出し
+def publish_html(file_name, title)
+  html = <<-EOS
+<html>
+  <title>#{title}</title>
+  <meta charset="utf-8">
+  <div>#{convert(file_name)}</div>
+  EOS
+
+  File.open("./#{file_name}.html", "w:UTF-8") do |file|
+    file.write(html)
+  end
+end
+
+publish_html("index", "ホーム")
+```
+
+とりあえず、やりたかったことが実現できました。
+Redcarpet素晴らしいです。
+
+## コードをハイライトしたい願望
+
+今回作成したドキュメントは、実装したコードを抜粋して記述していたのですが、
+量が増えると、シンタックスハイライトされていないコードの味気ない感じが辛くなってきました。
+
+Markdownをシンタックスハイライトする方法を調べてみると、
+[Albino][albino]というGemと[Pygments][pygments]というPythonで書かれた
+ライブラリを使用すればできることがわかり実装していましたが、今回の記事を書くにあたって
+Githubを見ていたところ最終更新日が3年前で、最近は[Pygments.rb][pygmentsrb]が主流？というか、
+RedcarpetのREADMEもこっちだったので修正しました。
+
+```ruby
+# シンタックスハイライト
+class HTMLwithPygments < Redcarpet::Render::HTML
+  def block_code(code, language)
+    Pygments.highlight(code, lexer: language)
+  end
+end
+markdown = Redcarpet::Markdown.new(HTMLwithPygments, fenced_code_blocks: true)
+
+# CSSも出してくれて便利!!
+puts "<style>#{Pygments.css('.highlight', style: 'monokai')}</style>"
+```
+
+秒速でシンタックスハイライトしてくれるPygmentsさんかっこいいですね。
+
+## 完成そして課題へ...
+
+CSSとか更新日とかナビゲーションを追加しました。
+
+<Gist slug="nagaki/d1efcf8364c673257235" />
+
+確かに動いてはいるのですが、もう少し良くしたいという思いがあります。
+
+- Markdownファイルをディレクトリに追加したらHTMLを出力したい
+- ファイルを保存したら変換したい
+- 更新したファイルだけ変換したい
+- HTMLをコードに書くのではなくテンプレートみたいにしたい
+- コードをいい感じにしたい
+
+自動処理はGuard使えばできそうな気がします。
+テンプレートってどうやってやるかよくわかりません。
+あとは「プログラミング言語Ruby」の6,7章あたりを読んで高めていきたいです。
+
+レベルアップしたらその2を書きたいと思います。
+
+[rdiscount]: https://github.com/davidfstr/rdiscount
+[pygments]: http://pygments.org/
+[albino]: https://github.com/github/albino
+[pygmentsrb]: https://github.com/tmm1/pygments.rb

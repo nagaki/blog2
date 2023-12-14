@@ -1,0 +1,26 @@
+/* Mobile
+-------------------- */
+@media ( max-width: $phone-width ) {
+  body {
+    @include font-size(1.4);
+    padding-top: $base-padding * 2;
+  }
+  .global-header {
+    .title,
+    .description {
+      margin-bottom: $base-margin;
+    }
+  }
+  .content {
+    .body {
+      img {
+        width: 100%;
+      }
+    }
+    .posts {
+      .date {
+        display: block;
+      }
+    }
+  }
+}

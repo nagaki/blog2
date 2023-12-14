@@ -1,0 +1,36 @@
+---
+import type { Post } from "@utils/common"
+import format from "date-fns/format"
+
+interface Props {
+  posts: {
+    [index: string]: Post[]
+  }
+}
+
+const { posts } = Astro.props
+---
+
+<section class="posts">
+  {
+    Object.entries(posts)
+      .sort((a, b) => (Number(a[0]) < Number(b[0]) ? 1 : -1))
+      .map(([year, items]) => (
+        <>
+          <h2 class="year">{year}</h2>
+          <ul>
+            {items
+              .sort((a, b) => (a.date < b.date ? 1 : -1))
+              .map(({ slug, data, collection, date }) => (
+                <li class={collection}>
+                  <time datetime={format(date, "yyyy-MM-dd")}>
+                    {format(date, "dd LLL")}
+                  </time>
+                  <a href={`/${collection}/${slug}`}>{data.title}</a>
+                </li>
+              ))}
+          </ul>
+        </>
+      ))
+  }
+</section>

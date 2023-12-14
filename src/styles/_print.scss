@@ -1,0 +1,37 @@
+/* Print
+-------------------- */
+@media print {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+  .header {
+    margin-bottom: 0;
+    .title {
+      background-color: #666;
+      border-radius: $radius-out;
+      padding: calc($base-padding / 2);
+      img {
+        width: 40%;
+      }
+    }
+  }
+  .header .description {
+    display: none;
+  }
+  .content {
+    .body {
+      img {
+        background-color: #fff;
+        border-radius: 0;
+        padding: 0;
+      }
+    }
+  }
+  .highlight {
+    background-color: #fff !important;
+    border-radius: 0;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+  }
+}

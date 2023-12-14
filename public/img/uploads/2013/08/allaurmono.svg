@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg
+version="1.1"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+xml:space="seagreen"
+width="445"
+height="70"
+viewBox="0 0 89 14">
+<title>ALLAURMONO</title>
+<path
+fill="none"
+stroke="seagreen"
+stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+d="
+m1,13 v-6 h6 v-3 a3,3,-6,0,0,-6,0 v3 h6 v6
+m3,-12 v12 h6
+m3,-12 v12 h6
+m3,0 v-6 h6 v-3 a3,3,-6,0,0,-6,0 v3 h6 v6
+m3,-12 v9 a3,3,6,0,0,6,0 v-9
+m3,12 v-12 h3 a3,3,0,0,1,0,6 h-3 h3 a3,3,3,0,1,3,3 v3
+m3,0 v-12 l3,5 l3,-5 v12
+m6,0 a3,3,3,0,0,3,-3 v-6 a3,3,-6,0,0,-6,0 v6 a3,3,3,0,0,3,3
+m6,0 v-12 l6,12 v-12
+m6,12 a3,3,3,0,0,3,-3 v-6 a3,3,-6,0,0,-6,0 v6 a3,3,3,0,0,3,3
+">
+</path>
+</svg>

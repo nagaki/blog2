@@ -1,0 +1,17 @@
+---
+import { getCollection } from "astro:content"
+import Layout from "../../layouts/Layout.astro"
+import { groupByYear } from "@utils/common"
+import Lists from "@components/Lists.astro"
+
+const allPractices = await getCollection("practice")
+
+const posts = groupByYear([...allPractices])
+---
+
+<Layout title="ALLAURMONO" description="ひびのできごとなどをたまにかきます">
+  <main class="content practice">
+    <h1>home</h1>
+    <Lists posts={posts} />
+  </main>
+</Layout>

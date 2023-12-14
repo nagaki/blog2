@@ -1,0 +1,35 @@
+---
+import Layout from "./Layout.astro"
+import format from "date-fns/format"
+import { getDateFromSlug } from "@utils/common"
+
+const { frontmatter, slug } = Astro.props
+
+const date = getDateFromSlug(slug)
+---
+
+<Layout title={frontmatter.title} description={frontmatter.description}>
+  <main class="content paint">
+    <article>
+      <h1>{frontmatter.title}</h1>
+      <footer class="meta">
+        <time datetime={format(date, "yyyy-MM-dd")}>
+          {format(date, "d LLL yyyy")}
+        </time>
+      </footer>
+      <div class="body">
+        <div class="flex-container">
+          {
+            frontmatter.images.map((image: string) => (
+              <object
+                class="flex-item"
+                data={`/img/uploads/${frontmatter.directory}/${image}`}
+              />
+            ))
+          }
+        </div>
+        <slot />
+      </div>
+    </article>
+  </main>
+</Layout>
