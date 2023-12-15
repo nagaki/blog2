@@ -1,4 +1,3 @@
-import format from "date-fns/format/index.js"
 import type { CollectionEntry } from "astro:content"
 
 export const getDateFromSlug = (slug: string): Date => {
@@ -14,6 +13,7 @@ export type Post = {
     description: string
   }
 }
+
 export const groupByYear = (
   posts: CollectionEntry<"diary" | "paint" | "practice">[]
 ) =>
@@ -21,7 +21,7 @@ export const groupByYear = (
     .map(({ slug, collection, data }) => ({ slug, collection, data }))
     .reduce((c: { [index: string]: Post[] }, post) => {
       const date = getDateFromSlug(post.slug)
-      const k = format(date, "yyyy")
+      const k = date.getFullYear().toString()
       if (!c[k]) c[k] = []
       c[k].push({ ...post, date })
       return c

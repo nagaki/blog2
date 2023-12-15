@@ -16,7 +16,6 @@
     "@fontsource-variable/noto-sans-jp": "^5.0.17",
     "@fontsource-variable/noto-sans-mono": "^5.0.18",
     "astro": "^4.0.4",
-    "date-fns": "^2.30.0",
     "typescript": "^5.3.3"
   },
   "devDependencies": {

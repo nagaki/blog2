@@ -1,6 +1,5 @@
 ---
 import type { Post } from "@utils/common"
-import format from "date-fns/format/index.js"
 
 interface Props {
   posts: {
@@ -23,9 +22,7 @@ const { posts } = Astro.props
               .sort((a, b) => (a.date < b.date ? 1 : -1))
               .map(({ slug, data, collection, date }) => (
                 <li class={collection}>
-                  <time datetime={format(date, "yyyy-MM-dd")}>
-                    {format(date, "dd LLL")}
-                  </time>
+                  <time datetime={date.toYMD()}>{date.toDL()}</time>
                   <a href={`/${collection}/${slug}`}>{data.title}</a>
                 </li>
               ))}

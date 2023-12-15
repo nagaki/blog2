@@ -4,6 +4,8 @@ import "@fontsource-variable/noto-sans-mono"
 import Header from "@components/Header.astro"
 import Footer from "@components/Footer.astro"
 import "../styles/style.scss"
+import "../utils/date.extensions"
+
 interface Props {
   title: string
   description: string
@@ -28,4 +30,3 @@ const { title, description } = Astro.props
     <Footer />
   </body>
 </html>
-<style is:global></style>

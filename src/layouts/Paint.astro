@@ -1,6 +1,5 @@
 ---
 import Layout from "./Layout.astro"
-import format from "date-fns/format/index.js"
 import { getDateFromSlug } from "@utils/common"
 
 const { frontmatter, slug } = Astro.props
@@ -13,8 +12,8 @@ const date = getDateFromSlug(slug)
     <article>
       <h1>{frontmatter.title}</h1>
       <footer class="meta">
-        <time datetime={format(date, "yyyy-MM-dd")}>
-          {format(date, "d LLL yyyy")}
+        <time datetime={date.toYMD()}>
+          {date.toDLY()}
         </time>
       </footer>
       <div class="body">
