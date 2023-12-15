@@ -8,7 +8,7 @@ body {
   line-height: 28px;
   background-color: var(--main-color);
   color: var(--font-color);
-  font-family: "Noto Sans JP Variable", sans-serif;
+  font-family: sans-serif;
   font-feature-settings: "palt" 1;
   letter-spacing: 0.04rem;
   margin: 0;

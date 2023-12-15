@@ -15,7 +15,7 @@
   --cool-color: #6899b9;
 
   /** based font */
-  --mono-font-family: "Noto Sans Mono Variable", monospace;
+  --mono-font-family: Monaco, monospace;
 
   /** base-width */
   --desktop-width: 640px;

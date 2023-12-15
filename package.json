@@ -13,8 +13,6 @@
     "@astrojs/check": "^0.3.2",
     "@astrojs/markdoc": "^0.8.0",
     "@astrojs/mdx": "^2.0.1",
-    "@fontsource-variable/noto-sans-jp": "^5.0.17",
-    "@fontsource-variable/noto-sans-mono": "^5.0.18",
     "astro": "^4.0.4",
     "typescript": "^5.3.3"
   },
