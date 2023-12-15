@@ -1,0 +1,23 @@
+:root {
+  /** based padding and margin */
+  --base-padding: 15px;
+  --base-margin: 15px;
+  --radius-out: 4px;
+  --radius-in: 2px;
+
+  /** based color */
+  --main-color: #fffcf7;
+  --link-color: #7c613d;
+  --link-hover-color: #5a452a;
+  --font-color: #3a3b3c;
+  --light-color: darken(tan, 15%);
+  --clear-color: snow;
+  --cool-color: #6899b9;
+
+  /** based font */
+  --mono-font-family: "Noto Sans Mono Variable", monospace;
+
+  /** base-width */
+  --desktop-width: 640px;
+  --phone-width: 480px;
+}

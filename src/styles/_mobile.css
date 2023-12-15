@@ -1,14 +1,15 @@
 /* Mobile
 -------------------- */
-@media ( max-width: $phone-width ) {
+@media (max-width: var(--phone-width)) {
   body {
-    @include font-size(1.4);
-    padding-top: $base-padding * 2;
+    font-size: 14px;
+    line-height: 21px;
+    padding-top: var(--base-padding) * 2;
   }
   .global-header {
     .title,
     .description {
-      margin-bottom: $base-margin;
+      margin-bottom: var(--base-margin);
     }
   }
   .content {

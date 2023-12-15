@@ -9,8 +9,8 @@
     margin-bottom: 0;
     .title {
       background-color: #666;
-      border-radius: $radius-out;
-      padding: calc($base-padding / 2);
+      border-radius: var(--radius-out);
+      padding: calc(var(--base-padding) / 2);
       img {
         width: 40%;
       }
