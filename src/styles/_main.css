@@ -4,12 +4,13 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-size: 16px;
-  line-height: 28px;
   background-color: var(--main-color);
   color: var(--font-color);
+  line-height: 28px;
   font-family: sans-serif;
   font-feature-settings: "palt" 1;
+  font-size: 16px;
+  font-weight: 300;
   letter-spacing: 0.04rem;
   margin: 0;
   padding: calc(var(--base-padding) * 3) var(--base-padding);
