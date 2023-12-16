@@ -1,5 +1,5 @@
 ---
-import type { Post } from "@utils/common"
+import { stripeDateFromSlug, type Post } from "@utils/common"
 
 interface Props {
   posts: {
@@ -23,7 +23,9 @@ const { posts } = Astro.props
               .map(({ slug, data, collection, date }) => (
                 <li class={collection}>
                   <time datetime={date.toYMD()}>{date.toDL()}</time>
-                  <a href={`/${collection}/${slug}`}>{data.title}</a>
+                  <a href={`/${collection}/${stripeDateFromSlug(slug)}`}>
+                    {data.title}
+                  </a>
                 </li>
               ))}
           </ul>

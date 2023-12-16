@@ -14,6 +14,13 @@ export type Post = {
   }
 }
 
+export const stripeDateFromSlug = (slug: string) => {
+  const slugWithoutDate = slug.split("-").slice(3).join("-")
+  return slugWithoutDate.startsWith("-")
+    ? slugWithoutDate.slice(1)
+    : slugWithoutDate
+}
+
 export const groupByYear = (
   posts: CollectionEntry<"diary" | "paint" | "practice">[]
 ) =>
