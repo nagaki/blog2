@@ -13,6 +13,9 @@ export default defineConfig({
   },
   integrations: [mdx()],
   site: "https://nagaki.github.io",
+  build: {
+    format: "file",
+  },
   redirects: {
     "/paint/square": "/paint/2007-05-19-square",
     "/paint/kao": "/paint/2007-08-07-kao",
