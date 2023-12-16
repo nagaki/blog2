@@ -1,0 +1,6 @@
+User-Agent: *
+Disallow: /404.html
+Disallow: /img/
+Disallow: /js/
+
+Sitemap: https://blog.nagaki.me/sitemap-index.html
