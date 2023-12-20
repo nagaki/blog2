@@ -33,3 +33,18 @@ export const groupByYear = (
       c[k].push({ ...post, date })
       return c
     }, {})
+
+export const combinePosts = (
+  posts: CollectionEntry<"diary" | "paint" | "practice">[]
+) =>
+  posts
+    .map(({ slug, collection, body, data }) => {
+      return {
+        date: getDateFromSlug(slug),
+        slug: stripeDateFromSlug(slug),
+        collection,
+        body,
+        data,
+      }
+    })
+    .sort((a, b) => b.date.getTime() - a.date.getTime())

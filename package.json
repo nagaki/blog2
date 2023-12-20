@@ -13,8 +13,11 @@
     "@astrojs/check": "^0.3.2",
     "@astrojs/markdoc": "^0.8.0",
     "@astrojs/mdx": "^2.0.1",
+    "@astrojs/rss": "^4.0.1",
     "@astrojs/sitemap": "^3.0.3",
     "astro": "^4.0.4",
+    "markdown-it": "^14.0.0",
+    "sanitize-html": "^2.11.0",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
