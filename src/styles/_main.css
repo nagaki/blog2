@@ -131,7 +131,13 @@ a {
       padding: 0;
     }
     li {
+      display: flex;
+      column-gap: calc(var(--base-margin) / 2);
       padding: 0.25em 0;
+
+      time {
+        flex: 0 0 60px;
+      }
     }
   }
   .adsense {
