@@ -23,7 +23,7 @@ const { posts } = Astro.props
               .map(({ slug, data, collection, date }) => (
                 <li class={collection}>
                   <time datetime={date.toYMD()}>{date.toDL()}</time>
-                  <a href={`/${collection}/${stripeDateFromSlug(slug)}`}>
+                  <a href={`/${collection}/${stripeDateFromSlug(slug)}.html`}>
                     {data.title}
                   </a>
                 </li>
