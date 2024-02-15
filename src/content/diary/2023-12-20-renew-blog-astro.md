@@ -1,6 +1,6 @@
 ---
 title: ブログをJekyllからAstroに移行しました
-description: このブログをJekyllからAstroにブログを移行した話
+description: このブログをJekyllからAstroに移行した話
 comments: false
 categories:
   - diary
