@@ -1,9 +1,9 @@
 ---
 interface Props {
-  slug: string
+	slug: string;
 }
 
-const { slug } = Astro.props
+const { slug } = Astro.props;
 ---
 
 <script is:inline src={`https://gist.github.com/${slug}.js`}></script>

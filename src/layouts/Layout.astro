@@ -1,17 +1,17 @@
 ---
-import Header from "@components/Header.astro"
-import Footer from "@components/Footer.astro"
-import "../styles/style.css"
-import "../utils/date.extensions"
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import "../styles/style.css";
+import "../utils/date.extensions";
 
 interface Props {
-  title: string
-  description: string
+	title: string;
+	description: string;
 }
 
-const { title, description } = Astro.props
+const { title, description } = Astro.props;
 
-const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>

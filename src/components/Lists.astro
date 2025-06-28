@@ -1,13 +1,13 @@
 ---
-import { stripeDateFromSlug, type Post } from "@utils/common"
+import { type Post, stripeDateFromSlug } from "@utils/common";
 
 interface Props {
-  posts: {
-    [index: string]: Post[]
-  }
+	posts: {
+		[index: string]: Post[];
+	};
 }
 
-const { posts } = Astro.props
+const { posts } = Astro.props;
 ---
 
 <section class="posts">
@@ -20,10 +20,10 @@ const { posts } = Astro.props
           <ul>
             {items
               .sort((a, b) => (a.date < b.date ? 1 : -1))
-              .map(({ slug, data, collection, date }) => (
+              .map(({ id, data, collection, date }) => (
                 <li class={collection}>
                   <time datetime={date.toYMD()}>{date.toDL()}</time>
-                  <a href={`/${collection}/${stripeDateFromSlug(slug)}.html`}>
+                  <a href={`/${collection}/${stripeDateFromSlug(id)}.html`}>
                     {data.title}
                   </a>
                 </li>

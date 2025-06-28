@@ -1,20 +1,20 @@
 ---
-import Paint from "@layouts/Paint.astro"
-import { stripeDateFromSlug } from "@utils/common"
-import { getCollection } from "astro:content"
+import { getCollection, render } from "astro:content";
+import Paint from "@layouts/Paint.astro";
+import { stripeDateFromSlug } from "@utils/common";
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("paint")
-  return blogEntries.map((entry) => ({
-    params: { slug: stripeDateFromSlug(entry.slug) },
-    props: { entry },
-  }))
+	const blogEntries = await getCollection("paint");
+	return blogEntries.map((entry) => ({
+		params: { slug: stripeDateFromSlug(entry.id) },
+		props: { entry },
+	}));
 }
 
-const { entry } = Astro.props
-const { Content } = await entry.render()
+const { entry } = Astro.props;
+const { Content } = await render(entry);
 ---
 
-<Paint frontmatter={entry.data} slug={entry.slug}>
+<Paint frontmatter={entry.data} slug={entry.id}>
   <Content />
 </Paint>
