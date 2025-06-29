@@ -4,7 +4,7 @@ import Paint from "@layouts/Paint.astro";
 import { stripeDateFromSlug } from "@utils/common";
 
 export async function getStaticPaths() {
-	const blogEntries = await getCollection("paint");
+  const blogEntries = await getCollection("paint");
 	return blogEntries.map((entry) => ({
 		params: { slug: stripeDateFromSlug(entry.id) },
 		props: { entry },
