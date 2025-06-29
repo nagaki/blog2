@@ -21,7 +21,7 @@
   text-decoration: none;
   color: var(--font-color);
   overflow: hidden;
-  &:hover {
+  .remark-link-card-plus__card:hover {
     border-color: #bbb;
     color: var(--font-color);
   }
