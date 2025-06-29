@@ -1,10 +1,10 @@
 ---
-import Layout from "./Layout.astro"
-import { getDateFromSlug } from "@utils/common"
+import { getDateFromSlug } from "@utils/common";
+import Layout from "./Layout.astro";
 
-const { frontmatter, slug } = Astro.props
+const { frontmatter, slug } = Astro.props;
 
-const date = getDateFromSlug(slug)
+const date = getDateFromSlug(slug);
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.description}>

@@ -1,10 +1,10 @@
 ---
-import Layout from "./Layout.astro"
-import { getDateFromSlug } from "@utils/common"
+import { getDateFromSlug } from "@utils/common";
+import Layout from "./Layout.astro";
 
-const { frontmatter, slug } = Astro.props
+const { frontmatter, slug } = Astro.props;
 
-const date = getDateFromSlug(slug)
+const date = getDateFromSlug(slug);
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.description}>
@@ -19,6 +19,7 @@ const date = getDateFromSlug(slug)
       <div class="body">
         <div class="flex-container">
           {
+            // TODO: アクセシビリティ考慮
             frontmatter.images.map((image: string) => (
               <object
                 class="flex-item"

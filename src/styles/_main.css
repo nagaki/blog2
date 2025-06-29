@@ -134,10 +134,9 @@ a {
       display: flex;
       column-gap: calc(var(--base-margin) / 2);
       padding: 0.25em 0;
-
-      time {
-        flex: 0 0 60px;
-      }
+    }
+    time {
+      flex: 0 0 60px;
     }
   }
   .adsense {
@@ -164,27 +163,36 @@ a {
 
 /* highlight
 -------------------- */
-.body {
-  .astro-code {
-    border: 1px solid #ddd;
-    border-radius: var(--radius-out);
-    margin: 0;
-    padding: 0.5em 0.75em;
-    code,
-    & {
-      font-size: 13px;
-      line-height: 19.5px;
-      font-family: var(--mono-font-family);
-      letter-spacing: 0;
-    }
+.body .astro-code {
+  border: 1px solid #ddd;
+  border-radius: var(--radius-out);
+  margin: 0;
+  padding: 0.5em 0.75em;
+  code,
+  & {
+    font-size: 13px;
+    line-height: 19.5px;
+    font-family: var(--mono-font-family);
+    letter-spacing: 0;
+    white-space: pre;
   }
 }
 
+.body :not(.astro-code) code {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: var(--radius-out);
+  font-size: 13px;
+  line-height: 13px;
+  padding-block: 2px;
+  padding-inline: 4px;
+  margin-inline: 3px;
+}
+
 .flex-container {
-  display: -webkit-flex;
   display: flex;
   flex-direction: row;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: flex-start;
   .flex-item {
     box-sizing: border-box;

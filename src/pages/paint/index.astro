@@ -1,12 +1,12 @@
 ---
-import { getCollection } from "astro:content"
-import Layout from "../../layouts/Layout.astro"
-import { groupByYear } from "@utils/common"
-import Lists from "@components/Lists.astro"
+import { getCollection } from "astro:content";
+import Lists from "@components/Lists.astro";
+import { groupByYear } from "@utils/common";
+import Layout from "../../layouts/Layout.astro";
 
-const allPractices = await getCollection("paint")
+const allPractices = await getCollection("paint");
 
-const posts = groupByYear([...allPractices])
+const posts = groupByYear([...allPractices]);
 ---
 
 <Layout title="ALLAURMONO" description="ひびのできごとなどをたまにかきます">
