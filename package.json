@@ -18,7 +18,10 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "biome check src/",
+    "lint:fix": "biome check --write src/",
+    "lint:ci": "biome ci src/"
   },
   "type": "module",
   "devDependencies": {
