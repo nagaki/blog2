@@ -15,13 +15,15 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
+    "test:e2e": "playwright test",
     "astro": "astro"
   },
   "type": "module",
   "devDependencies": {
-    "@biomejs/biome": "^2.0.6"
+    "@biomejs/biome": "^2.0.6",
+    "@playwright/test": "^1.54.0",
+    "@types/node": "^24.0.12"
   }
 }
