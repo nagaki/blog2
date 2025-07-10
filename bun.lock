@@ -11,7 +11,7 @@
         "@astrojs/sitemap": "^3.4.1",
         "astro": "5.11.0",
         "markdown-it": "^14.1.0",
-        "remark-link-card-plus": "^0.5.0",
+        "remark-link-card-plus": "^0.6.0",
         "sanitize-html": "^2.17.0",
         "typescript": "^5.8.3",
       },
@@ -499,7 +499,7 @@
 
     "fflate": ["fflate@0.8.2", "", {}, "sha512-cPJU47OaAoCbg0pBvzsgpTPhmhqI5eJjh/JIu8tPj5q+T7iLvW/JAYUqmE7KOB4R1ZyEhzBaIQpQpardBF5z8A=="],
 
-    "file-type": ["file-type@20.5.0", "", { "dependencies": { "@tokenizer/inflate": "^0.2.6", "strtok3": "^10.2.0", "token-types": "^6.0.0", "uint8array-extras": "^1.4.0" } }, "sha512-BfHZtG/l9iMm4Ecianu7P8HRD2tBHLtjXinm4X62XBOYzi7CYA7jyqfJzOvXHqzVrVPYqBo2/GvbARMaaJkKVg=="],
+    "file-type": ["file-type@21.0.0", "", { "dependencies": { "@tokenizer/inflate": "^0.2.7", "strtok3": "^10.2.2", "token-types": "^6.0.0", "uint8array-extras": "^1.4.0" } }, "sha512-ek5xNX2YBYlXhiUXui3D/BXa3LdqPmoLJ7rqEx2bKJ7EAUEfmXgW0Das7Dc6Nr9MvqaOnIqiPV0mZk/r/UpNAg=="],
 
     "fill-range": ["fill-range@7.1.1", "", { "dependencies": { "to-regex-range": "^5.0.1" } }, "sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg=="],
 
@@ -837,7 +837,7 @@
 
     "remark-gfm": ["remark-gfm@4.0.1", "", { "dependencies": { "@types/mdast": "^4.0.0", "mdast-util-gfm": "^3.0.0", "micromark-extension-gfm": "^3.0.0", "remark-parse": "^11.0.0", "remark-stringify": "^11.0.0", "unified": "^11.0.0" } }, "sha512-1quofZ2RQ9EWdeN34S79+KExV1764+wCUGop5CPL1WGdD0ocPpu91lzPGbwWMECpEpd42kJGQwzRfyov9j4yNg=="],
 
-    "remark-link-card-plus": ["remark-link-card-plus@0.5.0", "", { "dependencies": { "file-type": "^20.4.1", "open-graph-scraper": "^6.9.0", "sanitize-html": "^2.15.0", "unified": "^11.0.5", "unist-util-visit": "^5.0.0" } }, "sha512-hBw4wCIbMaWlgOCnTzZlDcDwIXRy5jokoXCY3FVhXgTqw1x2TAjIToYlDOKDwmN3IVw0DA4HmlegH1e96tiQrw=="],
+    "remark-link-card-plus": ["remark-link-card-plus@0.6.0", "", { "dependencies": { "file-type": "^21.0.0", "open-graph-scraper": "^6.10.0", "sanitize-html": "^2.17.0", "unified": "^11.0.5", "unist-util-visit": "^5.0.0" } }, "sha512-9EE7rscstoUD6GJ7DCu4urJ5Vk/wte2tTUp3C8ipsqLnc2whgFvOUnWqavcafdk+7Q8ZP02rIQlW5HBIUntn8g=="],
 
     "remark-mdx": ["remark-mdx@3.1.0", "", { "dependencies": { "mdast-util-mdx": "^3.0.0", "micromark-extension-mdxjs": "^3.0.0" } }, "sha512-Ngl/H3YXyBV9RcRNdlYsZujAmhsxwzxpDzpDEhFBVAGthS4GDgnctpDjgFl/ULx5UEDzqtW1cyBSNKqYYrqLBA=="],
 
