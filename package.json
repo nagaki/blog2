@@ -15,16 +15,18 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "biome check src/",
     "lint:fix": "biome check --write src/",
-    "lint:ci": "biome ci src/"
+    "lint:ci": "biome ci src/",
+    "test:e2e": "playwright test"
   },
   "type": "module",
   "devDependencies": {
-    "@biomejs/biome": "^2.0.6"
+    "@biomejs/biome": "^2.0.6",
+    "@playwright/test": "^1.54.0",
+    "@types/node": "^24.0.12"
   }
 }
