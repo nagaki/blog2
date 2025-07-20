@@ -1,6 +1,6 @@
 /* Mobile
 -------------------- */
-@media (max-width: var(--phone-width)) {
+@media (max-width: 480px) {
   body {
     font-size: 14px;
     line-height: 21px;
@@ -11,11 +11,14 @@
     .description {
       margin-bottom: var(--base-margin);
     }
+    .title {
+      font-size: 6rem;
+    }
   }
   .content {
     .body {
       img {
-        width: 100%;
+        max-width: 100%;
       }
     }
     .posts {

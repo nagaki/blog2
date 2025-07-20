@@ -5,16 +5,14 @@
     background-color: #fff;
     color: #000;
   }
+  a,
+  a:hover {
+    color: #000;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+  }
   .header {
     margin-bottom: 0;
-    .title {
-      background-color: #666;
-      border-radius: var(--radius-out);
-      padding: calc(var(--base-padding) / 2);
-      img {
-        width: 40%;
-      }
-    }
   }
   .header .description {
     display: none;
@@ -23,9 +21,16 @@
     .body {
       img {
         background-color: #fff;
+        border: 0;
         border-radius: 0;
         padding: 0;
       }
+    }
+  }
+  .body .astro-code {
+    code,
+    & {
+      white-space: pre-wrap;
     }
   }
   .highlight {

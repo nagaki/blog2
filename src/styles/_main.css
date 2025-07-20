@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "ALLAURMONO";
+  src: url("/fonts/ALLAURMONO.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* main
 -------------------- */
 html {
@@ -58,18 +66,15 @@ a {
     margin: 0 0 calc(var(--base-margin) * 2);
   }
   .title {
+    color: var(--cool-color);
     display: inline-block;
+    font-family: "ALLAURMONO", sans-serif;
+    font-size: 9rem;
+    line-height: 1;
+    &:hover {
+      color: var(--cool-hover-color);
+    }
   }
-}
-
-/* title svg
--------------------- */
-.animate {
-  fill: none;
-  stroke: var(--cool-color);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1;
 }
 
 /* content
