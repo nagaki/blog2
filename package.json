@@ -21,8 +21,8 @@
     "lint": "biome check src/",
     "lint:fix": "biome check --write src/",
     "lint:ci": "biome ci src/",
-    "test:e2e": "playwright test",
-    "test:update-snapshots": "playwright test --update-snapshots",
+    "test:e2e": "astro build && playwright test",
+    "test:update-snapshots": "astro build && playwright test --update-snapshots",
     "test:show-report": "playwright show-report"
   },
   "type": "module",
