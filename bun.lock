@@ -11,7 +11,7 @@
         "@astrojs/sitemap": "^3.4.2",
         "astro": "5.12.9",
         "markdown-it": "^14.1.0",
-        "remark-link-card-plus": "^0.6.1",
+        "remark-link-card-plus": "^0.7.0",
         "sanitize-html": "^2.17.0",
         "typescript": "^5.8.3",
       },
@@ -837,7 +837,7 @@
 
     "remark-gfm": ["remark-gfm@4.0.1", "", { "dependencies": { "@types/mdast": "^4.0.0", "mdast-util-gfm": "^3.0.0", "micromark-extension-gfm": "^3.0.0", "remark-parse": "^11.0.0", "remark-stringify": "^11.0.0", "unified": "^11.0.0" } }, "sha512-1quofZ2RQ9EWdeN34S79+KExV1764+wCUGop5CPL1WGdD0ocPpu91lzPGbwWMECpEpd42kJGQwzRfyov9j4yNg=="],
 
-    "remark-link-card-plus": ["remark-link-card-plus@0.6.1", "", { "dependencies": { "file-type": "^21.0.0", "open-graph-scraper": "^6.10.0", "sanitize-html": "^2.17.0", "unified": "^11.0.5", "unist-util-visit": "^5.0.0" } }, "sha512-0cChNQGnOr52m8kTLgVprwD6dXgJODL3aJ55JwITgBBJhGON24upLCq6S1Sqt+ZrgDiDp7yd/T6X4OCbtQ+p+A=="],
+    "remark-link-card-plus": ["remark-link-card-plus@0.7.0", "", { "dependencies": { "file-type": "^21.0.0", "open-graph-scraper": "^6.10.0", "sanitize-html": "^2.17.0", "unified": "^11.0.5", "unist-util-visit": "^5.0.0" } }, "sha512-bYLKtCcT/8ouRTf4AZcjncm6HQD31xDQVs1Dg39LrmuFrXNMyz/MDUnUgNAk73+xMuIt1nIvOGWolDuwH18UBw=="],
 
     "remark-mdx": ["remark-mdx@3.1.0", "", { "dependencies": { "mdast-util-mdx": "^3.0.0", "micromark-extension-mdxjs": "^3.0.0" } }, "sha512-Ngl/H3YXyBV9RcRNdlYsZujAmhsxwzxpDzpDEhFBVAGthS4GDgnctpDjgFl/ULx5UEDzqtW1cyBSNKqYYrqLBA=="],
 
