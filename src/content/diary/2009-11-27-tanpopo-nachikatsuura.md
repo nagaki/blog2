@@ -82,8 +82,8 @@ tags:
 最後までお読み頂き、ありがとうございました！
 
 [1]: /img/uploads/2009/11/tanpopo-nachikatsuura-1.jpg
-[2]: /img/uploads/2009/11/tanpopo-nachikatsuura-1.jpg
-[3]: /img/uploads/2009/11/tanpopo-nachikatsuura-1.jpg
-[4]: /img/uploads/2009/11/tanpopo-nachikatsuura-1.jpg
-[5]: /img/uploads/2009/11/tanpopo-nachikatsuura-1.jpg
-[6]: /img/uploads/2009/11/tanpopo-nachikatsuura-1.jpg
+[2]: /img/uploads/2009/11/tanpopo-nachikatsuura-2.jpg
+[3]: /img/uploads/2009/11/tanpopo-nachikatsuura-3.jpg
+[4]: /img/uploads/2009/11/tanpopo-nachikatsuura-4.jpg
+[5]: /img/uploads/2009/11/tanpopo-nachikatsuura-5.jpg
+[6]: /img/uploads/2009/11/tanpopo-nachikatsuura-6.jpg
