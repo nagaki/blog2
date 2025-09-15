@@ -27,7 +27,7 @@
   },
   "type": "module",
   "devDependencies": {
-    "@biomejs/biome": "^2.2.2",
+    "@biomejs/biome": "^2.2.4",
     "@playwright/test": "^1.54.2",
     "@types/node": "^24.3.0"
   }
